@@ -3,37 +3,53 @@
 
 <head>
     <title>Students Survey Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form>
-        <div align="center">
-            <h1>Students Interests Survey Form</h1>
+    <form id="surveyForm">
+
+        <h1>Students Survey Form</h1>
+
+        <div class="input-container" data-error="Sorry, that username is taken." >
             Enter your name:
-            <input type="text" name="userName" size="35" maxlength="30">
-            <br>
+            <input type="text" 
+                   class="input"
+                   name="userName" 
+                   placeholder="Enter your name" 
+                   size="30" maxlength="30" 
+                   value="Shraddha">
+        </div>
+        <br><br>
+        <div class="input-container">
             Enter your faculty:
-            <input type="text" name="faculty" size="35" maxlength="30" value="">
-            <br>
+            <input type="text" name="faculty" placeholder="Enter your faculty"  size="30" maxlength="20" value="">
+            <br><br>
+        </div>
+        <div class="input-container">
             Choose your Interests:
             <input type="checkbox" name="graphicDesigning">Graphic Designing
             <input type="checkbox" name="webDesigning">Web Designing
             <input type="checkbox" name="UI/UX">UI/UX
-            <input type="checkbox" name="Programming">Programming
-            <input type="checkbox" name="softwareDeveloper">Software Developer
-            <br>
+        </div>
+        <!-- Checkbox lets you select multiple options-->
+        <br><br>
+        <div class="input-container">
+            Choose your shift:
             <select name="shift">
                 <option>
                 <option value=1 selected="true">morning
                 <option value=2>day
                 <option value=3>evening
             </select>
-            <br>
-            Tell us why do you need this bootcamp:
-            <textarea name="comments" cols="30" rows="3"></textarea>
-            <br>
-            <input type=submit value="submit">
         </div>
+        <!--Select box lets you choose one of the multiple dropdown options-->
+        <br><br>
+        Tell us why do you need this bootcamp:
+        <textarea name="comments" cols="30" rows="3"></textarea>
+        <br><br>
+        <input type=submit value="submit">
+
 
     </form>
 </body>

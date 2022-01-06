@@ -1,0 +1,19 @@
+h1{
+    background-color: rgb(182, 240, 248);
+}
+body {
+    font-family: 'Anaheim';
+    font-size: 1.2em;
+  }
+.input-container [data-error] .input{
+   border-color: red;
+   color: red;
+   background-color: rgb(235, 193, 193);
+  }
+.input-container[data-error]::after {
+    content: attr(data-error);
+    font-size: 8.85 em;
+    color: firebrick;
+    display: block;
+    margin:10px 0;
+}
